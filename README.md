@@ -9,9 +9,8 @@ run a dd server on your server:
 
 
 ## dd-client
-1. rename deploy.xml.sample to deploy.xml
-2. update deploy.xml
-3. run deploy command
+1. update deploy.xml
+2. run deploy command
 <pre>dd deploy appapi</pre>
 
 ## local build

@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+  test-api:
+    image: test-api:latest
+    ports:
+      - "8000:8000"
+    hostname: test-api
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: start-first
+      restart_policy:
+        condition: on-failure
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
