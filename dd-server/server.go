@@ -1,7 +1,8 @@
 package main
 
 import (
-	"fmt"
+	"crypto/sha256"
+	"encoding/hex"
 	"io"
 	"log"
 	"net/http"
@@ -116,7 +117,7 @@ func hashHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.Write([]byte(hex.EncodeToString(hasher.Sum(nil)))
+	w.Write([]byte(hex.EncodeToString(hasher.Sum(nil))))
 }
 
 func deployHandler(w http.ResponseWriter, r *http.Request) {
