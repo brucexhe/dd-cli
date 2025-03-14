@@ -1,0 +1,4 @@
+server:
+  url: http://localhost:1688
+client:
+  token: e7a96fd2008111f0a2150242ac120003  

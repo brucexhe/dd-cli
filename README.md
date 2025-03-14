@@ -5,12 +5,21 @@ A opensource docker deploy cli tool. Easy use to deploy a docker image to server
 ## dd-server
 
 run a dd server on your server: 
-<pre>./dd-server -port 1688</pre>
+<pre>./dd-server</pre>
+or
+<pre>./dd-server -port 1688 </pre>
+
+you will get a token after server start up successfully.
+<pre>
+Auth token:
+e7a96fd2008111f0a2150242ac120003
+</pre>
 
 
 ## dd-client
-1. update deploy.xml
-2. run deploy command
+1. update config.yml 
+2. update deploy.yml
+3. run deploy command
 <pre>dd deploy appapi</pre>
 
 ## local build
